@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package employment_contracts;
+
+option go_package = "github.com/example/micro/proto/gen/go/employment_contracts;employmentcontractspb";
+
+message EmploymentContract {
+  int64 id = 1;
+  string number = 2;
+  string conclusion_date = 3; // date ISO8601
+  int64 organization_id = 4;
+  int64 representative_id = 5;
+  int64 employee_id = 6;
+  int64 department_id = 7;
+  int64 position_id = 8;
+  int32 conditions_class = 9;
+  string work_date_from = 10; // date
+  string work_date_to = 19; // optional date (may be empty for indefinite)
+  int32 probation_months = 11; // optional
+  float salary = 12;
+  string work_hours_from = 13; // time
+  string work_hours_to = 14; // time
+  string break_from = 15; // optional time
+  string break_to = 16;   // optional time
+  int32 paid_leave_days = 17;
+  string personnel_number = 18; // табельный номер
+}
+
+message CreateEmploymentContractRequest {
+  string number = 1;
+  string conclusion_date = 2;
+  int64 organization_id = 3;
+  int64 representative_id = 4;
+  int64 employee_id = 5;
+  int64 department_id = 6;
+  int64 position_id = 7;
+  int32 conditions_class = 8;
+  string work_date_from = 9;
+  string work_date_to = 18;
+  int32 probation_months = 10;
+  float salary = 11;
+  string work_hours_from = 12;
+  string work_hours_to = 13;
+  string break_from = 14;
+  string break_to = 15;
+  int32 paid_leave_days = 16;
+  string personnel_number = 17;
+}
+message CreateEmploymentContractResponse { EmploymentContract contract = 1; }
+
+message GetEmploymentContractRequest { int64 id = 1; }
+message GetEmploymentContractResponse { EmploymentContract contract = 1; }
+
+message ListEmploymentContractsRequest { int32 limit = 1; int32 offset = 2; }
+message ListEmploymentContractsResponse { repeated EmploymentContract contracts = 1; }
+
+message UpdateEmploymentContractRequest {
+  int64 id = 1;
+  string number = 2;
+  string conclusion_date = 3;
+  int64 organization_id = 4;
+  int64 representative_id = 5;
+  int64 employee_id = 6;
+  int64 department_id = 7;
+  int64 position_id = 8;
+  int32 conditions_class = 9;
+  string work_date_from = 10;
+  string work_date_to = 19;
+  int32 probation_months = 11;
+  float salary = 12;
+  string work_hours_from = 13;
+  string work_hours_to = 14;
+  string break_from = 15;
+  string break_to = 16;
+  int32 paid_leave_days = 17;
+  string personnel_number = 18;
+}
+message UpdateEmploymentContractResponse { EmploymentContract contract = 1; }
+
+message DeleteEmploymentContractRequest { int64 id = 1; }
+message DeleteEmploymentContractResponse {}
+
+service EmploymentContractsService {
+  rpc CreateEmploymentContract(CreateEmploymentContractRequest) returns (CreateEmploymentContractResponse);
+  rpc GetEmploymentContract(GetEmploymentContractRequest) returns (GetEmploymentContractResponse);
+  rpc ListEmploymentContracts(ListEmploymentContractsRequest) returns (ListEmploymentContractsResponse);
+  rpc UpdateEmploymentContract(UpdateEmploymentContractRequest) returns (UpdateEmploymentContractResponse);
+  rpc DeleteEmploymentContract(DeleteEmploymentContractRequest) returns (DeleteEmploymentContractResponse);
+}

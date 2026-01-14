@@ -1,0 +1,15 @@
+                   List of tables
+ Schema |           Name           | Type  |  Owner  
+--------+--------------------------+-------+---------
+ public | accounts                 | table | student
+ public | departments              | table | student
+ public | dismissal_order_bodies   | table | student
+ public | dismissal_order_headers  | table | student
+ public | employment_contracts     | table | student
+ public | employment_order_bodies  | table | student
+ public | employment_order_headers | table | student
+ public | individuals              | table | student
+ public | organizations            | table | student
+ public | positions                | table | student
+(10 rows)
+

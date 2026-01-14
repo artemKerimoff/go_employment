@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "github.com/example/micro/proto/gen/go/service;servicepb";
+
+message Empty {}
+
+message HealthCheckRequest {}
+message HealthCheckResponse {
+  string status = 1;
+}
+
+message Resource {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message GetResourceRequest {
+  string id = 1;
+}
+message ListResourcesRequest {}
+message ListResourcesResponse {
+  repeated Resource items = 1;
+}
+
+service ResourceService {
+  rpc Health(HealthCheckRequest) returns (HealthCheckResponse);
+  rpc GetResource(GetResourceRequest) returns (Resource);
+  rpc ListResources(ListResourcesRequest) returns (ListResourcesResponse);
+}

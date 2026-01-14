@@ -1,0 +1,9 @@
+accounts: cd backend/services/accounts && CGO_ENABLED=0 go run ./cmd/server
+organizations: cd backend/services/organizations && CGO_ENABLED=0 go run ./cmd/server
+departments: cd backend/services/departments && CGO_ENABLED=0 go run ./cmd/server
+positions: cd backend/services/positions && CGO_ENABLED=0 go run ./cmd/server
+individuals: cd backend/services/individuals && CGO_ENABLED=0 go run ./cmd/server
+employment_contracts: cd backend/services/employment-contracts && CGO_ENABLED=0 go run ./cmd/server
+employment_order: cd backend/services/employment-order && CGO_ENABLED=0 go run ./cmd/server
+dismissal_order: cd backend/services/dismissal-order && CGO_ENABLED=0 go run ./cmd/server
+bff: cd backend/bff && CGO_ENABLED=0 go run ./cmd/server

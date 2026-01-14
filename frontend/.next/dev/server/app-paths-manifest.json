@@ -1,0 +1,16 @@
+{
+  "/accounts/page": "app/accounts/page.js",
+  "/contracts/[id]/edit/page": "app/contracts/[id]/edit/page.js",
+  "/contracts/new/page": "app/contracts/new/page.js",
+  "/contracts/page": "app/contracts/page.js",
+  "/dismissal-orders/[id]/edit/page": "app/dismissal-orders/[id]/edit/page.js",
+  "/dismissal-orders/page": "app/dismissal-orders/page.js",
+  "/employment-orders/[id]/edit/page": "app/employment-orders/[id]/edit/page.js",
+  "/employment-orders/new/page": "app/employment-orders/new/page.js",
+  "/employment-orders/page": "app/employment-orders/page.js",
+  "/individuals/new/page": "app/individuals/new/page.js",
+  "/individuals/page": "app/individuals/page.js",
+  "/organizations/[id]/edit/page": "app/organizations/[id]/edit/page.js",
+  "/organizations/page": "app/organizations/page.js",
+  "/page": "app/page.js"
+}

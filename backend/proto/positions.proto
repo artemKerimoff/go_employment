@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package positions;
+
+option go_package = "github.com/example/micro/proto/gen/go/positions;positionspb";
+
+message Position {
+  int64 id = 1;
+  string title = 2;
+}
+
+message CreatePositionRequest { string title = 1; }
+message CreatePositionResponse { Position position = 1; }
+
+message GetPositionRequest { int64 id = 1; }
+message GetPositionResponse { Position position = 1; }
+
+message ListPositionsRequest { int32 limit = 1; int32 offset = 2; }
+message ListPositionsResponse { repeated Position positions = 1; }
+
+message UpdatePositionRequest {
+  int64 id = 1;
+  string title = 2;
+}
+message UpdatePositionResponse { Position position = 1; }
+
+message DeletePositionRequest { int64 id = 1; }
+message DeletePositionResponse {}
+
+service PositionsService {
+  rpc CreatePosition(CreatePositionRequest) returns (CreatePositionResponse);
+  rpc GetPosition(GetPositionRequest) returns (GetPositionResponse);
+  rpc ListPositions(ListPositionsRequest) returns (ListPositionsResponse);
+  rpc UpdatePosition(UpdatePositionRequest) returns (UpdatePositionResponse);
+  rpc DeletePosition(DeletePositionRequest) returns (DeletePositionResponse);
+}

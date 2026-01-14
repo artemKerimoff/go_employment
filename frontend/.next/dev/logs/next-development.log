@@ -1,0 +1,48 @@
+[00:00:02.056] Server  LOG     ✓ Ready in 1646ms
+[00:00:14.019] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:27.776] Browser ERROR   Failed to load bodies {}
+[00:01:27.776] Browser ERROR   Failed to load bodies {}
+[00:03:35.844] Server  LOG     ✓ Compiled in 1130ms
+[00:03:42.721] Server  LOG     ✓ Compiled in 60ms
+[00:03:52.040] Server  LOG     ✓ Compiled in 59ms
+[00:05:53.265] Browser ERROR   Failed to update employment order {}
+[00:06:12.716] Browser ERROR   Failed to update employment order {}
+[00:09:06.809] Server  LOG     ✓ Compiled in 315ms
+[00:09:19.688] Server  LOG     ✓ Compiled in 101ms
+[00:19:48.323] Server  LOG     ✓ Compiled in 645ms
+[00:20:18.920] Server  LOG     ✓ Compiled in 103ms
+[00:28:03.203] Server  LOG     ✓ Compiled in 99ms
+[00:28:04.183] Browser ERROR   uncaughtError: ReferenceError: printRow is not defined
+[00:28:21.654] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:28:21.656] Server  LOG     ✓ Compiled in 75ms
+[00:28:22.965] Server  ERROR   ⨯ ReferenceError: printRow is not defined
+[00:28:23.586] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:24.335] Browser ERROR   uncaughtError: ReferenceError: printRow is not defined
+[00:29:24.548] Server  LOG     ✓ Compiled in 310ms
+[00:29:24.558] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:25.921] Server  ERROR   ⨯ ReferenceError: fmt is not defined
+[00:29:27.218] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:28.442] Browser ERROR   uncaughtError: ReferenceError: fmt is not defined
+[00:29:55.421] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:55.441] Server  LOG     ✓ Compiled in 792ms
+[00:29:56.187] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:34.583] Server  LOG     ✓ Compiled in 672ms
+[00:33:43.672] Server  LOG     ✓ Compiled in 85ms
+[00:33:52.174] Server  LOG     ✓ Compiled in 112ms
+[00:34:23.584] Server  LOG     ✓ Compiled in 112ms
+[01:55:06.516] Server  LOG     ✓ Compiled in 755ms
+[01:55:07.042] Browser ERROR   uncaughtError: ReferenceError: fmt is not defined
+[01:55:47.165] Server  LOG     ✓ Compiled in 161ms
+[01:55:47.190] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:55:50.158] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:13.581] Server  LOG     ✓ Compiled in 86ms
+[01:56:27.277] Server  LOG     ✓ Compiled in 224ms
+[01:56:35.456] Server  LOG     ✓ Compiled in 78ms
+[01:56:47.129] Server  LOG     ✓ Compiled in 75ms
+[02:04:01.440] Server  LOG     ✓ Compiled in 619ms
+[02:04:11.921] Server  LOG     ✓ Compiled in 101ms
+[02:04:33.747] Server  LOG     ✓ Compiled in 69ms
+[02:14:29.381] Server  LOG     ✓ Compiled in 536ms
+[02:14:44.831] Server  LOG     ✓ Compiled in 207ms
+[02:15:00.826] Server  LOG     ✓ Compiled in 67ms
+[02:20:49.533] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

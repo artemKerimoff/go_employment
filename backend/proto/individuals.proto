@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package individuals;
+
+option go_package = "github.com/example/micro/proto/gen/go/individuals;individualspb";
+
+message Individual {
+  int64 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string patronymic = 4; // optional
+  string registration_address = 5;
+  string passport_series = 6;
+  string passport_number = 7;
+  string passport_issued_by = 8;
+  string passport_issued_date = 9;
+  string passport_issued_department_code = 10;
+  bool is_authorized_representative = 11;
+}
+
+message CreateIndividualRequest {
+  string first_name = 1;
+  string last_name = 2;
+  string patronymic = 3;
+  string registration_address = 4;
+  string passport_series = 5;
+  string passport_number = 6;
+  string passport_issued_by = 7;
+  string passport_issued_date = 8;
+  string passport_issued_department_code = 9;
+  bool is_authorized_representative = 10;
+}
+message CreateIndividualResponse { Individual individual = 1; }
+
+message GetIndividualRequest { int64 id = 1; }
+message GetIndividualResponse { Individual individual = 1; }
+
+message ListIndividualsRequest { int32 limit = 1; int32 offset = 2; }
+message ListIndividualsResponse { repeated Individual individuals = 1; }
+
+message UpdateIndividualRequest {
+  int64 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string patronymic = 4;
+  string registration_address = 5;
+  string passport_series = 6;
+  string passport_number = 7;
+  string passport_issued_by = 8;
+  string passport_issued_date = 9;
+  string passport_issued_department_code = 10;
+  bool is_authorized_representative = 11;
+}
+message UpdateIndividualResponse { Individual individual = 1; }
+
+message DeleteIndividualRequest { int64 id = 1; }
+message DeleteIndividualResponse {}
+
+service IndividualsService {
+  rpc CreateIndividual(CreateIndividualRequest) returns (CreateIndividualResponse);
+  rpc GetIndividual(GetIndividualRequest) returns (GetIndividualResponse);
+  rpc ListIndividuals(ListIndividualsRequest) returns (ListIndividualsResponse);
+  rpc UpdateIndividual(UpdateIndividualRequest) returns (UpdateIndividualResponse);
+  rpc DeleteIndividual(DeleteIndividualRequest) returns (DeleteIndividualResponse);
+}

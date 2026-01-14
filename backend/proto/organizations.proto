@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package organizations;
+
+option go_package = "github.com/example/micro/proto/gen/go/organizations;organizationspb";
+
+message Organization {
+  int64 id = 1;
+  string title = 2;
+  string address = 3;
+  string okpo = 4;
+  string inn = 5;
+  string kpp = 6; // optional
+  int64 account_id = 7;
+}
+
+message CreateOrganizationRequest {
+  string title = 1;
+  string address = 2;
+  string okpo = 3;
+  string inn = 4;
+  string kpp = 5;
+  int64 account_id = 6;
+}
+message CreateOrganizationResponse { Organization organization = 1; }
+
+message GetOrganizationRequest { int64 id = 1; }
+message GetOrganizationResponse { Organization organization = 1; }
+
+message ListOrganizationsRequest { int32 limit = 1; int32 offset = 2; }
+message ListOrganizationsResponse { repeated Organization organizations = 1; }
+
+message UpdateOrganizationRequest {
+  int64 id = 1;
+  string title = 2;
+  string address = 3;
+  string okpo = 4;
+  string inn = 5;
+  string kpp = 6;
+  int64 account_id = 7;
+}
+message UpdateOrganizationResponse { Organization organization = 1; }
+
+message DeleteOrganizationRequest { int64 id = 1; }
+message DeleteOrganizationResponse {}
+
+service OrganizationsService {
+  rpc CreateOrganization(CreateOrganizationRequest) returns (CreateOrganizationResponse);
+  rpc GetOrganization(GetOrganizationRequest) returns (GetOrganizationResponse);
+  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse);
+  rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse);
+  rpc DeleteOrganization(DeleteOrganizationRequest) returns (DeleteOrganizationResponse);
+}
